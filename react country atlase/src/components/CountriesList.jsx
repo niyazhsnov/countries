@@ -1,6 +1,6 @@
 import React from "react";
-import Country from "./Country";
-import Skeleton from "./Skeleton";
+import CountryCards from "./CountryCards";
+import Cascade from "./Cascade";
 const Countrieslist = ({ countries, page, loading, error, tryAgain }) => {
   return (
     <>
@@ -9,7 +9,7 @@ const Countrieslist = ({ countries, page, loading, error, tryAgain }) => {
           {!error ? (
             countries.slice(page * 12, page * 12 + 12).map((country) => {
               return (
-                <Country
+                <CountryCards
                   key={country.name}
                   flag={country.flag}
                   name={country.name || ""}
@@ -29,8 +29,8 @@ const Countrieslist = ({ countries, page, loading, error, tryAgain }) => {
         </>
       ) : (
         <>
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((skeleton) => (
-            <Skeleton key={skeleton} />
+          {[1, 2, 3, 4, 5, 6, 7, 8].map((cascade) => (
+            <Cascade key={cascade} />
           ))}
         </>
       )}

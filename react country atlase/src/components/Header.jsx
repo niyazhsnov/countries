@@ -10,7 +10,7 @@ const Header = ({ theme, toggleTheme }) => {
     
       </div>
       <div onClick={toggleTheme} className="flex items-center space-x-2 font-semibold cursor-pointer">
-
+    
         <p>{!theme ? "Dark" : "Light"} Mode</p>
       </div>
     </div>
